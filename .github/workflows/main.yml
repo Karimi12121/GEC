@@ -43,3 +43,18 @@ jobs:
         name: Jupyter Notebook Execution
         run: jupyter execute data_prep_and_data_proc.ipynb
         shell: bash 
+        
+      - id: jupyter1
+        name: t5 model execution
+        run: jupyter execute t5_model.ipynb
+        shell: bash
+
+      - id: jupyter2
+        name: lstm model execution
+        run: jupyter execute lstm_model.ipynb
+        shell: bash
+        
+      - id: jupyter3
+        name: attention mechanism execution
+        run: jupyter execute attention_mechanism_bahdanau.ipynb
+        shell: bash
