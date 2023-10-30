@@ -22,7 +22,14 @@ jobs:
       - id: repo 
         name: Repo Checkout
         uses: actions/checkout@v2
-
+      - id: lfo
+        name: Checkout github repo (+ download lfs dependencies)
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+      - name: Checkout LFS objects
+        run: git lfs checkout
+        
       - id: python
         name: Python Setup & Packages Installation
         uses: actions/setup-python@v2
